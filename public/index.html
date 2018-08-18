@@ -6,6 +6,29 @@
   <script src="bundle.js" async></script>
 </head>
 <body>
+  <br><br>
+  <div data-controller="slideshow" data-slideshow-index="1">
+    <button data-action="slideshow#previous">←</button>
+    <button data-action="slideshow#next">→</button>
 
+    <div data-target="slideshow.slide" class="slide">🐵</div>
+    <div data-target="slideshow.slide" class="slide">🙈</div>
+    <div data-target="slideshow.slide" class="slide">🙉</div>
+    <div data-target="slideshow.slide" class="slide">🙊</div>
+  </div>
+
+  <br><br>
+  
+  <div data-controller="clipboard"> 
+    PIN: <input data-target="clipboard.source" type="text" value="1234" readonly>
+    <a href="#" data-action="click->clipboard#copy">Copy to clipboard</a>
+  </div>
+
+  <br><br>
+
+  <div data-controller="hello">
+    <input type="text" data-target="hello.name">
+    <button data-action="click->hello#greet">Greet</button>
+  </div>
 </body>
 </html>
